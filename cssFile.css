@@ -1,0 +1,215 @@
+
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+
+/* NAVBAR STYLING */
+/* ref : https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/  */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+    margin :0px;
+    /* added in order to make the nav bar sticky */
+    position: fixed; 
+    width: 100%; 
+    z-index:1;
+}
+.nav-links a {
+    color: #fff;
+}
+.logo {
+    font-size: 32px;
+}
+
+/* navbar menu */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+.menu li:hover {
+    background-color: grey;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+.menu li {
+    padding: 5px 14px;
+}   
+/* hamburger */
+input[type=checkbox]{
+    display: none;
+} 
+/*hamburger menu*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+/* applaying media queries to make interactions */
+@media (max-width: 1096px) {
+    .menu { 
+        display:none;
+        position: absolute;
+        background-color:black;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+    .menu li:hover {
+        display: inline-block;
+        background-color:grey;
+        transition: 0.3s ease;
+    }
+    .menu li + li {
+        margin-top: 12px;
+    }
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+/* more css rules */ 
+
+.jumbotron-info{
+    margin-left: 30px;
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+} 
+
+#aboutMe{
+    padding-top: 100px;
+}
+#profile-img{
+    margin-top: 70px;
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+} 
+
+#education li {
+    margin-left:30px ;
+    list-style: circle;
+}
+
+#workExperience li {
+    margin-left:30px ;
+    list-style: circle;
+}
+
+.jumbotron{
+    margin-bottom: 5px;
+    padding:30px;
+}
+
+.logos{
+    height: 50px;
+    width: 140px;
+}
+#logo-arsenal{
+    position: relative;
+    right: 40px;
+}
+
+#wsl-logo{
+    height: 50px;
+    width: 50px;
+}
+
+/* CONTACT ME FORM */
+/* ref : https://codepen.io/matmarsiglio/pen/HLIor */
+
+#form {
+    position: relative;
+    width: 400px;
+    margin: 50px auto 100px auto;
+}
+
+input {
+    font-size: 0.875em;
+    width: 350px;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
+    border-color: black;
+    background: transparent;
+    outline: none;
+    border-bottom: none;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}  
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: black;
+}
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: black;
+}
+
+input:hover {
+    background: grey;
+}
+
+textarea {
+    border-width: 2px;
+    border-color: black;
+    width: 350px;
+    max-width: 350px;
+    height: 110px;
+    max-height: 110px;
+    padding: 15px;
+    background: transparent;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+    background: grey;
+}
+  
+#submit {
+    width: 350px;
+    padding: 0;
+    margin: -5px 0px 0px 0px;
+    outline:none;
+    cursor: pointer;
+    border-top: none;
+    border-bottom: 2px solid black;
+}
+  
+#submit:hover {
+    color: grey;
+    color: black;
+}
+
